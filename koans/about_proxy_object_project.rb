@@ -21,7 +21,7 @@ class Proxy
   end
 
   def method_missing(method_name, *args, &block)
-    @messages << method_name.to_sym
+    @messages << method_name
     @object.send(method_name, *args, &block)
   end
 
